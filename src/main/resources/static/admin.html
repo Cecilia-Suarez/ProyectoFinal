@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancheros</title>
+    <link rel="icon" href="img/i-cancha.png">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/adm.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/e50f04e157.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="js/addProd.js"></script>
+    <script type="text/javascript" src="js/addCat.js"></script>
+    <script type="text/javascript" src="js/addCaract.js"></script>
+    <script type="text/javascript" src="js/listProd.js"></script>
+    <script type="text/javascript" src="js/listCat.js"></script>
+    <script type="text/javascript" src="js/listUser.js"></script>
+    <script type="text/javascript" src="js/listCaract.js"></script>
+    <script type="text/javascript" src="js/navbar.js"></script>
+    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="5ef0eacd-cde4-4bf8-9d7d-0a5bcfe5d59a";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+        <div id="userLogin">
+            <button id="user-avatar"></button>
+            <div id="nombreYCierreDeSesion">
+                <p id="nombreCompletoUser"></p>
+                <a href="/logout" class="button">Cerrar sesión</a>
+            </div>
+            <select class="navbar-user" id="navbarUser" onchange="navigateToURL()">
+                <option value="" disabled selected hidden></option>
+                <option value="datosUser.html">Información personal</option>
+                <option value="favoritos.html">Favoritos</option>
+                <option value="historialReservas.html">Reservas</option>
+                <option value="admin.html" id="adminPanel" style="display: none;">Panel administrador</option>
+            </select>
+        </div>
+
+        <div id="contentLoginAndRegister">
+            <a href="login.html" class="button"><button>Iniciar Sesión</button></a>
+            <a href="register.html" class="button"><button>Registrarse</button></a>
+        </div>
+
+        <!-- ICONO MENU HAMBURGUESA -->
+        <div class="menu-icon" id="menuIcon">
+            <select class="navbar-user-response" id="navbarUserResponsive" onchange="navigateToURL()">
+                <option value="" disabled selected hidden>&#x2630;</option>
+                <option value="datosUser.html">Información personal</option>
+                <option value="favoritos.html">Favoritos</option>
+                <option value="historialReservas.html">Reservas</option>
+                <option value="admin.html" id="adminPanelResponsive" style="display: none;">Panel administrador</option>
+                <option value="/logout">Cerrar Sesión</option>
+            </select>
+
+            <select id="navbarUserResponsiveNoLogged" class="navbar-user-response-no-logged" onchange="navigateToURL()">
+                <option value="" disabled selected hidden>&#x2630;</option>
+                <option value="login.html">Iniciar Sesión</option>
+                <option value="register.html">Registrarse</option>
+            </select>
+        </div>
+
+    </header>
+    <div id="noResponsive">
+        <h3>Lo sentimos, esta página no está optimizada para dispositivos móviles.</h3>
+        <p>Te recomendamos visitarla desde un dispositivo de escritorio.</p>
+    </div>
+    <main>
+        <div id="panelAdm">
+            <h2>Bienvenido Administrador</h2>
+            <button id="addProd">Agregar producto</button>
+            <button id="listProd">Lista de productos</button>
+            <button id="addCat">Agregar categoría</button>
+            <button id="listCat">Lista de categorias</button>
+            <button id="addCaract">Agregar características</button>
+            <button id="listCaract">Lista de características</button>
+            <button id="listUser">Lista de usuarios</button>
+        </div>
+
+        <form id="formProd">
+            <h2 id="Titulo">Agregar producto</h2>
+            <label>
+                <h4>Nombre</h4>
+            </label>
+            <input type="text" id="nombreProd" required />
+            <label><h4>Descripción</h4></label>
+            <textarea type="text" id="descripcionProd" required></textarea>
+            <h4>Precio U$$</h4>
+            <input type="text" name="precio" id="precio" required>
+            <div id="radioCat"></div>
+            <div id="checkboxCaract"></div>
+            <div id="image">
+                <h4>Imagen</h4>
+                <input type="file" name="imagen" id="imagen" accept="image/*" />
+                <img src="" alt="" id="imagenPreview">
+            </div>
+            <button type='submit'>Agregar producto</button>
+        </form>
+
+        <form id="formCat">
+            <h2>Agregar categoría</h2>
+            <label for="">
+                <h4>Nombre</h4>
+            </label>
+            <input type="text" id="nombreCat" required>
+            <div id="desCat">
+                <h4>Descripción</h4>
+                <textarea name="" id="descripcion" required></textarea>
+            </div>
+            <div id="imagenCategoria">
+                <h4>Imagen</h4>
+                <input type="file" name="imagen" id="imagenCate" accept="image/*" required />
+                <img src="" alt="" id="imagenPreviewCategoria">
+            </div>
+            <button type="submit">Agregar categoría</button>
+        </form>
+
+        <form id="formEditProd">
+            <h2>Editar Producto</h2>
+            <label><h4>Nombre</h4></label>
+            <input type="text" id="nombreProdEdit" required />
+            <label><h4>Descripción</h4></label>
+            <textarea type="text" id="descripcionProdEdit" required></textarea>
+            <h4>Precio U$$</h4>
+            <input type="text" name="precio" id="precioProdEdit" required>
+            <div id="radioCatEdit"></div>
+            <div id="checkboxCaractEdit"></div>
+            <div id="imageEdit">
+                <h4>Imagen</h4>
+                <input type="file" name="imagen" id="imagenEdit" accept="image/*" />
+                <img src="" alt="" id="imagenPreviewEdit">
+            </div>
+            <button type="button" id="btnActualizar">Actualizar</button>
+            <button type="button" id="btnCancelar">Cancelar</button>
+        </form>
+
+        <form id="formEditCategoría">
+            <h2>Editar Categoría</h2>
+            <label><h4>Nombre</h4></label>
+            <input type="text" id="nombreCategoriaEdit" required />
+            <label><h4>Descripción</h4></label>
+            <input type="text" id="descripcionCategoriaEdit" required />
+            <div id="imageCategoriaEdit">
+                <h4>Imagen</h4>
+                <input type="file" name="imagen" id="imagenCategoriaEdit" accept="image/*" />
+                <img src="" alt="" id="imagenPreviewCategoriaEdit">
+            </div>
+            <button type="button" id="btnActualizarCategoría">Actualizar</button>
+            <button type="button" id="btnCancelarCategoría">Cancelar</button>
+        </form>
+
+        
+        <div id="divProdTabla">
+            <h2>Lista de productos</h2>
+            <div id="tabla">
+                <table id="prodTabla">
+                    <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                        <th>Categoria</th>
+                        <th>Cacterísticas</th>
+                        <th>Editar</th>
+                        <th>Eliminar</th>
+                    </tr>
+                    </thead>
+                    <tbody id="prodTablaBody"></tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div id="divCatTabla">
+            <h2>Lista de categorías</h2>
+            <div id="tabla">
+                <table id="catTabla">
+                    <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Imagen</th>
+                        <th>Editar</th>
+                        <th>Eliminar</th>
+                    </tr>
+                    </thead>
+                    <tbody id="catTablaBody"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <form id="formCaract">
+            <h2>Agregar caracteristica </h2>
+            <label>
+                <h4>Nombre</h4>
+            </label>
+            <input type="text" id="nombreCaract" required>
+            <div id="imagen">
+                <h4>Imagen</h4>
+                <input type="file" name="imagen" id="imagenCaract" accept="image/*" required />
+                <img src="" alt="" id="imagenPreviewCaract">
+            </div>
+
+            <button type='submit'>Agregar caracteristica</button>
+        </form>
+
+        <div id="divCaractTabla">
+            <h2>Lista de caracteristica</h2>
+            <div id="tabla">
+                <table id="caractTabla">
+                    <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Imagen</th>
+                    </tr>
+                    </thead>
+                    <tbody id="caractTablaBody"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="divUser">
+            <h2>Lista de usuarios</h2>
+            <div id="tabla">
+                <table id="catTabla">
+                    <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                    </tr>
+                    </thead>
+                    <tbody id="userTablaBody"></tbody>
+                </table>
+            </div>
+        </div>
+        <div id="response"></div>
+    </main>
+    <footer>
+        <div>
+            <div>
+                <img src="img/logo.png" alt="logo">
+                <i class="fa-regular fa-copyright"></i>
+                <p>2024</p>
+                <a href="politicas.html" class="button">Ver Políticas de Uso</a>
+            </div>
+            <div id="iconoWhatsapp">
+                <a href="https://wa.me/541121794871" >
+                    <img src="../img/waap.png" alt="iconowapp" id="iconowaap">
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

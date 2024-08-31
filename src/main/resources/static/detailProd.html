@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancheros</title>
+    <link rel="icon" href="img/i-cancha.png">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/detailProd.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://kit.fontawesome.com/e50f04e157.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/detailProd.js"></script>
+    <script type="text/javascript" src="js/datosUser.js"></script>
+    <script type="text/javascript" src="js/navbar.js"></script>
+    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="5ef0eacd-cde4-4bf8-9d7d-0a5bcfe5d59a";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+        <div id="userLogin">
+            <button id="user-avatar"></button>
+            <div id="nombreYCierreDeSesion">
+                <p id="nombreCompletoUser"></p>
+                <a href="/logout" class="button">Cerrar sesión</a>
+            </div>
+            <select class="navbar-user" id="navbarUser" onchange="navigateToURL()">
+                <option value="" disabled selected hidden></option>
+                <option value="datosUser.html">Información personal</option>
+                <option value="favoritos.html">Favoritos</option>
+                <option value="historialReservas.html">Reservas</option>
+                <option value="admin.html" id="adminPanel" style="display: none;">Panel administrador</option>
+            </select>
+        </div>
+
+        <div id="contentLoginAndRegister">
+            <a href="login.html" class="button"><button>Iniciar Sesión</button></a>
+            <a href="register.html" class="button"><button>Registrarse</button></a>
+        </div>
+
+        <!-- ICONO MENU HAMBURGUESA -->
+        <div class="menu-icon" id="menuIcon">
+            <select class="navbar-user-response" id="navbarUserResponsive" onchange="navigateToURL()">
+                <option value="" disabled selected hidden>&#x2630;</option>
+                <option value="datosUser.html">Información personal</option>
+                <option value="favoritos.html">Favoritos</option>
+                <option value="historialReservas.html">Reservas</option>
+                <option value="admin.html" id="adminPanelResponsive" style="display: none;">Panel administrador</option>
+                <option value="/logout">Cerrar Sesión</option>
+            </select>
+
+            <select id="navbarUserResponsiveNoLogged" class="navbar-user-response-no-logged" onchange="navigateToURL()">
+                <option value="" disabled selected hidden>&#x2630;</option>
+                <option value="login.html">Iniciar Sesión</option>
+                <option value="register.html">Registrarse</option>
+            </select>
+        </div>
+
+    </header>
+
+    <main>
+        <div id="detail">
+            <div id="titulo">
+                <a href="index.html"><span class="material-symbols-outlined">arrow_back</span></a>
+            </div>
+            <div id="descripcionYcard"></div>
+            <div id="seccionCaracteristicas">
+                <h2> Características del producto</h2>
+                <div id="caracteristicas"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div>
+          <img src="img/logo.png" alt="logo">
+        <i class="fa-regular fa-copyright"></i>
+        <p>2024</p>
+        <a href="politicas.html" class="button">Ver Políticas de Uso</a>  
+        </div>
+        <div id="iconoWhatsapp">
+          <a href="https://wa.me/541121794871" >
+            <img src="../img/waap.png" alt="iconowapp" id="iconowaap">
+        </a>  
+        </div>
+    </footer>
+</body>
+
+</html>

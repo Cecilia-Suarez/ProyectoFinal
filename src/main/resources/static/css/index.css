@@ -1,0 +1,546 @@
+:root {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 16px;
+    --color-primary: #F6BF0F;
+    --color-secondary: #FFE07E;
+    --color-terceray: #FFF6D9;
+    --color-quaternary: #235C9F;
+    --color-quintenary: #0F2948;
+    box-sizing: border-box;
+    color: var(--color-terceray);
+    background-color: var(--color-terceray);
+}
+
+body,
+:root {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+header,
+footer {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-quintenary);
+    padding: 0.938rem;
+    color: var(--color-primary);
+}
+
+header {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    top: 0;
+    justify-content: space-between;
+    box-shadow: 0px 5px 5px var(--color-quintenary);
+    box-sizing: border-box;
+    padding: 7px 10px 0px 10px;
+}
+
+header a img,
+footer img {
+    width: 6.250em;
+    height: auto;
+}
+
+header button {
+    border: none;
+    background-color: var(--color-quaternary);
+    color: var(--color-text);
+    font-family: "Barlow Condensed", sans-serif;
+    border-radius: 2.25rem;
+    padding: 0.938em;
+    font-size: 1.125em;
+}
+
+footer {
+    justify-content: space-between;
+    width: 100%;
+    bottom: 0;
+    box-sizing: border-box;
+    box-shadow: 5px 0px 5px var(--color-quintenary);
+    text-decoration: none;
+}
+
+footer div {
+    display: flex;
+    justify-content: space-around;
+    gap: 0.625rem;
+    align-items: center;
+}
+
+#iconoWhatsapp{
+    margin-right: 8em ;
+}
+
+main {
+    margin-top: 6%;
+}
+
+/*Menú hamburguesa*/
+.menu-icon {
+    display: none;
+}
+
+button:hover,
+input:hover,
+select:hover {
+    cursor: pointer;
+}
+
+/*Detalle*/
+#detailUserMain {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #0F2948;
+    height: 100vh;
+    width: 100%;
+    font-size: 1.563rem;
+    font-weight: 500;
+}
+
+#containerAvatar {
+    text-align: center;
+}
+
+#nombreProd,
+#descripcion,
+#caracteristicasContainer {
+    display: grid;
+    grid-template-columns: 0.5fr 2.5fr;
+    gap: 1em;
+    padding-bottom: 2em;
+    align-items: center;
+}
+
+
+#datosUser div p,
+#datosUsuario div p,
+#detalleProducto div p,
+#detalleReserva div p {
+    margin: 0;
+    align-content: center;
+}
+
+#datosUser div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    padding-bottom: 2em;
+}
+
+#datosUser div span,
+#datosUsuario div span,
+#detalleProducto div span,
+#detalleReserva div span,
+#inputTelefono,
+#inputIndicaciones {
+    border: 0.063em solid #235C9F;
+    padding: 0.938em;
+    border-radius: 0.313em;
+}
+
+#avatar {
+    background-color: var(--color-primary);
+    color: var(--color-quaternary);
+    border-radius: 50%;
+    font-weight: 600;
+    border: none;
+    font-size: 6em;
+    width: 20rem;
+    height: 20rem;
+    text-align: center;
+}
+
+/*Usuario logueado*/
+#userLogin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%;
+    flex-direction: row;
+}
+
+#user-avatar {
+    color: var(--color-quaternary);
+    border-radius: 50%;
+    background-color: var(--color-terceray);
+    font-size: 30px;
+    font-weight: 600;
+    padding: 15px 20px;
+}
+
+#nombreYCierreDeSesion {
+    text-align: center;
+}
+
+#nombreCompletoUser {
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--color-terceray);
+    margin-bottom: 0;
+}
+
+#navbarUser,
+#navbarUserResponsive,
+#navbarUserResponsiveNoLogged {
+    color: var(--color-primary);
+    background-color: transparent;
+    border: none;
+    width: 16px;
+    height: 16px;
+}
+
+#navbarUser option,
+#navbarUserResponsive option,
+#navbarUserResponsiveNoLogged option {
+    background-color: var(--color-terceray);
+    font-weight: 600;
+    font-size: 16px;
+    color: black;
+    text-align: center;
+}
+
+#navbarUserResponsive,
+#navbarUserResponsiveNoLogged {
+    appearance: none;
+}
+
+/*Buscador*/
+#buscador {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    top: 0%;
+}
+
+#buscador::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/bg-buscador.png);
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.5);
+    z-index: -1;
+    content: "";
+}
+
+#buscador #text {
+    display: flex;
+    flex-direction: column;
+    max-width: 32rem;
+    justify-content: space-between;
+}
+
+#buscador #text #text2 {
+    font-size: 2em;
+    margin-top: 0%;
+}
+
+#buscadorInput p,
+#resultados .mensajeErrorResultados {
+    font-size: 1.5rem;
+    margin-top: 0%;
+}
+
+#resultados .mensajeErrorResultados {
+    color: #00008b;
+    text-align: center;
+    margin-bottom: 15%;
+}
+
+#buscador #text #text1 {
+    font-size: 4em;
+    text-align: center;
+}
+
+#buscadorInput h1 {
+    color: #F6BF0F;
+    align-self: center;
+    margin-bottom: 0%;
+}
+
+.search-block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#contenedorFechaYHora,
+#contenedorPalabraClaveCategoriaYCaracteristica,
+#clearSearch {
+    display: flex;
+    gap: 0.55rem;
+    align-items: center;
+    justify-content: left;
+}
+
+.feedback {
+    color: white;
+}
+
+#buscadorInput input,
+#buscadorInput #caracteristica,
+#buscadorInput #caracteristica option,
+#buscadorInput #categoria,
+#buscadorInput #categoria option,
+.buttonReserva,
+#horaBuscador,
+#fechaBuscador,
+#clearSearch {
+    padding: 0.7em;
+    background-color: var(--color-quaternary);
+    border: none;
+    border-radius: 2.25em;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 1.125em;
+    color: var(--color-terceray);
+    width: 10rem;
+}
+
+#buscadorInput #buscar:hover {
+    color: var(--color-quaternary);
+    background-color: var(--color-terceray);
+}
+
+#buscadorInput #buscar {
+    background-color: var(--color-primary);
+    align-self: center;
+    color: #00008b;
+}
+
+a.button {
+    color: #F6BF0F;
+    text-decoration: none;
+}
+
+a.button:visited {
+    color: white;
+}
+
+a.button:hover {
+    color: white;
+}
+
+a.button:active {
+    color: white;
+}
+
+a {
+    color: #F6BF0F;
+    text-decoration: none;
+}
+
+
+a:hover {
+    color: white;
+}
+
+a:active {
+    color: white;
+}
+
+/*Categorias*/
+#viewCategorias {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px;
+}
+
+#viewCategorias button {
+    border: none;
+    background-color: var(--color-secondary);
+    color: var(--color-quintenary);
+    font-family: "Barlow Condensed", sans-serif;
+    border-radius: 36px;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+#viewCategorias button:hover {
+    background-color: var(--color-primary);
+}
+
+/*Productos body*/
+/*Estilos para los productos dentro del div showProductos */
+#showProductos,
+.listaResultados {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* La cuadrícula se ajustará automáticamente */
+    gap: 1em;
+    margin-bottom: 3rem;
+    justify-items: center;
+    align-items: center;
+}
+
+.producto,
+.cardResultados {
+    border: 1px solid #ccc;
+    background-color: var(--color-quaternary);
+    border-radius: 10px;
+    padding: 1.250em;
+    width: 30vw;
+    height: 85vh;
+}
+
+.producto h2,
+.cardResultados h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.625em;
+    color: var(--color-primary);
+}
+
+.producto p,
+.cardResultados p {
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+}
+
+.producto p.descripcion,
+.cardResultados p.descripcion {
+    color: rgb(12, 12, 12);
+}
+
+.producto p.precio,
+.cardResultados p.precio {
+    color: rgb(8, 8, 8);
+    font-weight: bold;
+}
+
+#recomendaciones,
+.contenedorTituloResultados {
+    text-align: center;
+}
+
+#tituloRecomendaciones,
+.tituloResultados {
+    color: var(--color-primary);
+}
+
+/* Estilos solo para el botón "Ver más" */
+.ver-mas-link {
+    border: none;
+    border-radius: 20px;
+    background-color: var(--color-secondary);
+    color: #00008b;
+    padding: 0.313em 0.625em;
+    font-size: 0.688em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    float: right;
+    margin-top: 0.625em;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+
+.ver-mas-link:hover {
+    background-color: var(--color-primary);
+}
+
+/*Corazon*/
+.favorite-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.heart-icon {
+    font-size: 24px;
+    color: #ccc;
+    /* Color del corazón vacío */
+    transition: color 0.3s ease;
+}
+
+.favorite-btn.favorited .heart-icon {
+    color: red;
+    /* Color del corazón lleno */
+}
+#iconowaap {
+width:45px;
+height:45px;
+
+}
+
+
+@media (max-width: 800px) {
+
+    header,
+    footer,
+    footer div,
+    #buscador,
+    #buscadorInput,
+    #viewCategorias,
+    #descripcionYcard,
+    #contenedorFechaYHora,
+    #contenedorPalabraClaveCategoriaYCaracteristica,
+    #clearSearch,
+    .time-picker,
+    #detailUserMain {
+        flex-direction: column;
+    }
+
+    footer {
+        position: relative;
+        bottom: 0;
+    }
+
+    #iconoWhatsapp{
+        margin-top: 1em;
+        margin-right: 0;
+    }
+    
+    #detailUserMain {
+        min-height: max-content;
+        margin-top: 40%;
+        margin-bottom: 100%;
+    }
+
+    #datosUser div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /*Ocultamos los botones de "Iniciar Sesión" y "Registrarse".*/
+    header button,
+    #userLogin {
+        display: none;
+    }
+
+    /*Mostrar el icono del menú hamburguesa.*/
+    .menu-icon {
+        display: block;
+    }
+
+    /*Buscador*/
+    #buscador {
+        text-align: center;
+    }
+
+    #buscadorInput {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #buscadorInput input,
+    #buscadorInput select,
+    #buscadorInput #buscar,
+    #clearSearch {
+        margin-bottom: 0.25rem;
+    }
+
+}

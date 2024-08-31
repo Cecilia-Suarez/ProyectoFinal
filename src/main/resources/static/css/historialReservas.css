@@ -1,0 +1,311 @@
+:root {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 16px;
+    --color-primary: #F6BF0F;
+    --color-secondary: #FFE07E;
+    --color-terceray: #FFF6D9;
+    --color-quaternary: #235C9F;
+    --color-quintenary: #0F2948;
+    box-sizing: border-box;
+    color: var(--color-terceray);
+    background-color: var(--color-terceray);
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Asegura que el body ocupe toda la altura de la ventana */
+}
+
+header,
+footer {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-quintenary);
+    padding: 0.938rem;
+    color: var(--color-primary);
+}
+
+header {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    top: 0;
+    justify-content: space-between;
+    box-shadow: 0px 5px 5px var(--color-quintenary);
+    box-sizing: border-box;
+    padding: 7px 10px 0px 10px;
+}
+
+footer {
+    justify-content: left;
+    gap: 0.625rem;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 5px 0px 5px var(--color-quintenary);
+    text-decoration: underline;
+    /* Esta línea asegura que el enlace esté subrayado */
+    margin-top: auto;
+    /* Empuja el footer hacia el fondo */
+}
+
+header a img,
+footer img {
+    width: 6.250em;
+    height: auto;
+}
+
+header button {
+    border: none;
+    background-color: var(--color-quaternary);
+    color: var(--color-terceray);
+    font-family: "Barlow Condensed", sans-serif;
+    border-radius: 2.25rem;
+    padding: 0.938em;
+    font-size: 1.125em;
+}
+
+.menu-icon {
+    display: none;
+}
+
+button:hover,
+input:hover,
+select:hover {
+    cursor: pointer;
+}
+
+#detailUserMain {
+    color: black;
+}
+
+#userLogin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%;
+    flex-direction: row;
+}
+
+#user-avatar {
+    color: var(--color-quaternary);
+    border-radius: 50%;
+    background-color: var(--color-terceray);
+    font-size: 30px;
+    font-weight: 600;
+    padding: 15px 20px;
+}
+
+#nombreYCierreDeSesion {
+    text-align: center;
+}
+
+#nombreCompletoUser {
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--color-terceray);
+    margin-bottom: 0;
+}
+
+#navbarUser,
+#navbarUserResponsive,
+#navbarUserResponsiveNoLogged {
+    color: var(--color-primary);
+    background-color: transparent;
+    border: none;
+    width: 16px;
+    height: 16px;
+}
+
+#navbarUser option,
+#navbarUserResponsive option,
+#navbarUserResponsiveNoLogged option {
+    background-color: var(--color-terceray);
+    font-weight: 600;
+    font-size: 16px;
+    color: black;
+    text-align: center;
+}
+
+#navbarUserResponsive,
+#navbarUserResponsiveNoLogged {
+    appearance: none;
+}
+
+a.button {
+    color: #F6BF0F;
+    text-decoration: none;
+}
+
+a.button:visited {
+    color: white;
+}
+
+a.button:hover {
+    color: white;
+}
+
+a.button:active {
+    color: white;
+}
+
+a {
+    color: #F6BF0F;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+}
+
+a:active {
+    color: white;
+}
+
+.reserva {
+    border: 1px solid #ccc;
+    background-color: var(--color-quaternary);
+    border-radius: 10px;
+    padding: 1.250em;
+    width: 20vw;
+}
+
+.reserva h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.625em;
+    color: var(--color-primary);
+}
+
+.reserva p {
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+}
+
+#TituloHistorialReservas {
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+#listaReservas {
+    display: grid;
+    width: 100vw;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    justify-items: center;
+    align-items: center;
+}
+
+main {
+    flex: 1 0 auto;
+    /* Permite que main crezca y ocupe el espacio disponible */
+    padding-top: 200px;
+    /* Ajusta este valor según la altura de tu header */
+    width: 100vw;
+}
+
+h1 {
+    color: #F6BF0F;
+}
+
+.descripcion,
+.categoria,
+.caracteristica,
+.precio,
+.fecha,
+.hora,
+.telefono,
+.indicaciones {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.descripcion div,
+.categoria div,
+.caracteristica div,
+.precio div,
+.fecha div,
+.hora div,
+.telefono div,
+.indicaciones div {
+    margin-right: 1rem;
+    /* Ajusta el espacio entre los elementos según necesites */
+}
+
+@media (max-width: 1200px) {
+    .reserva {
+        width: 40%;
+        /* Ajuste de ancho para pantallas medianas */
+    }
+}
+
+@media (max-width: 800px) {
+
+    header,
+    footer,
+    #TituloHistorialReservas,
+    #listaReservas {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #listaReservas {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    header button {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .reserva {
+        width: 55%;
+        /* Ajusta el ancho de los productos en pantallas pequeñas */
+    }
+
+    .descripcion,
+    .categoria,
+    .caracteristica,
+    .precio,
+    .fecha,
+    .hora,
+    .telefono,
+    .indicaciones {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 600px) {
+    #listaReservas {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .descripcion,
+    .categoria,
+    .caracteristica,
+    .precio,
+    .fecha,
+    .hora,
+    .telefono,
+    .indicaciones {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .reserva {
+        width: 70%;
+        /* Asegura que cada reserva ocupe todo el ancho disponible */
+    }
+}

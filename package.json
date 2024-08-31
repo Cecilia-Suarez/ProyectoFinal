@@ -1,0 +1,22 @@
+{
+  "name": "grupo4cancheros",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "a"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nacho1960/grupo4cancheros.git"
+  },
+  "keywords": [
+    "digitalhouseg4"
+  ],
+  "author": "g4",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nacho1960/grupo4cancheros/issues"
+  },
+  "homepage": "https://github.com/nacho1960/grupo4cancheros#readme"
+}

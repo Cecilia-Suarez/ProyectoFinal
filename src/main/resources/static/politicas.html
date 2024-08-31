@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancheros</title>
+    <link rel="icon" href="img/i-cancha.png">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/adm.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/politicas.css">
+    <script src="https://kit.fontawesome.com/e50f04e157.js" crossorigin="anonymous"></script>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="5ef0eacd-cde4-4bf8-9d7d-0a5bcfe5d59a";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+        <div id="userLogin">
+            <button id="user-avatar"></button>
+            <div id="nombreYCierreDeSesion">
+                <p id="nombreCompletoUser"></p>
+                <a href="/logout" class="button">Cerrar sesión</a>
+            </div>
+            <select class="navbar-user" id="navbarUser" onchange="navigateToURL()">
+                <option value="" disabled selected hidden></option>
+                <option value="datosUser.html">Información personal</option>
+                <option value="favoritos.html">Favoritos</option>
+                <option value="historialReservas.html">Reservas</option>
+                <option value="admin.html" id="adminPanel" style="display: none;">Panel administrador</option>
+            </select>
+        </div>
+
+        <div id="contentLoginAndRegister">
+            <a href="login.html" class="button"><button>Iniciar Sesión</button></a>
+            <a href="register.html" class="button"><button>Registrarse</button></a>
+        </div>
+
+        <!-- ICONO MENU HAMBURGUESA -->
+        <div class="menu-icon" id="menuIcon">
+            <select class="navbar-user-response" id="navbarUserResponsive" onchange="navigateToURL()">
+                <option value="" disabled selected hidden>&#x2630;</option>
+                <option value="datosUser.html">Información personal</option>
+                <option value="favoritos.html">Favoritos</option>
+                <option value="historialReservas.html">Reservas</option>
+                <option value="admin.html" id="adminPanelResponsive" style="display: none;">Panel administrador</option>
+                <option value="/logout">Cerrar Sesión</option>
+            </select>
+
+            <select id="navbarUserResponsiveNoLogged" class="navbar-user-response-no-logged" onchange="navigateToURL()">
+                <option value="" disabled selected hidden>&#x2630;</option>
+                <option value="login.html">Iniciar Sesión</option>
+                <option value="register.html">Registrarse</option>
+            </select>
+        </div>
+    </header>
+
+    <main id="mainPoliticas">
+        <section id="politicas">
+            <h2>Políticas de Uso</h2>
+            <div class="politicas-container">
+                <div class="politica">
+                    <h3>1. Reservas y Pagos</h3>
+                    <ul>
+                        <li>Reservas:Las canchas deben reservarse con anticipación a través del sitio web, aplicación móvil, o en persona.Las reservas son por tiempo específico.</li>
+                        <li>Pagos:los pagos deben realizarse en el momento de la reserva.Se aceptan pagos en línea mediante tarjetas de crédito, débito y otros métodos de pago electrónico. </li>
+                        <li>CancelacionesLas cancelaciones deben hacerse al menos 24 horas antes de la hora reservada para recibir un reembolso completo.
+                        Cancelaciones con menos de 24 horas de anticipación no serán reembolsadas.</li>
+                    </ul>
+                </div>
+                <div class="politica">
+                    <h3>2. Uso de las Instalaciones</h3>
+                    <ul>  
+                        <li>Horario:Las instalaciones están disponibles para su uso de [hora de apertura] a [hora de cierre]. No se permite el uso de las instalaciones fuera de estos horarios.</li>
+                        <li>Aceeso:Solo los usuarios con una reserva confirmada tienen derecho a usar la cancha. Se requerirá una confirmación de reserva al momento del ingreso.</li>
+                        <li>Duracion del Usurio: El tiempo de uso de la cancha está limitado al tiempo reservado. Los usuarios deben abandonar la cancha puntualmente al finalizar su reserva.</li>
+                    </ul>
+                </div>
+                <div class="politica">
+                    <h3>3. Comportamiento y Seguridad</h3>
+                    <ul> 
+                        <li>Conducta:Se espera que todos los usuarios mantengan una conducta respetuosa y deportiva. Cualquier forma de comportamiento abusivo, violento o disruptivo resultará en la expulsión y posible prohibición futura.</li>
+                        <li>Equipamiento:Se debe usar el equipamiento adecuado para cada deporte. No se permite el uso de calzado inapropiado o que pueda dañar las instalaciones.</li>
+                        <li>Responsabilidad:Los usuarios son responsables de cualquier daño causado a las instalaciones o al equipamiento durante su tiempo de uso.</li>
+                    </ul>
+                </div>
+                <div class="politica">
+                    <h3>4. Prohibiciones</h3>
+                    <ul> 
+                        <li>Sustancias Prohibidas:No se permite el consumo de alcohol, tabaco, o sustancias ilegales en las instalaciones.</li>
+                        <li> Animales:No se permiten animales en las instalaciones, a menos que sean animales de servicio.</li>
+                    </ul>
+                </div>
+                <div class="politica">
+                    <h3>5. Higiene y Mantenimiento</h3>
+                    <ul> 
+                        <li>Limpieza: Los usuarios deben dejar la cancha y las instalaciones en las mismas condiciones de limpieza en las que las encontraron.
+                            Se deben desechar todos los residuos en los contenedores de basura proporcionados.</li>
+                        <li> Mantenimiento: Si se observa algún daño o problema con las instalaciones, se debe notificar al personal inmediatamente.</li>
+                    </ul>
+                </div>
+                <div class="politica">
+                    <h3>6. Políticas de Emergencia</h3>
+                    <ul> 
+                        <li>Accidentes y Lesiones:En caso de accidente o lesión, se debe notificar inmediatamente al personal. Hay equipos de primeros auxilios disponibles en las instalaciones.</li>
+                        <li>Clima: Las reservas pueden ser canceladas o reprogramadas debido a condiciones climáticas adversas. Los usuarios serán notificados con la mayor antelación posible.</li>
+                    </ul>
+                </div>
+            <div class="politica">
+                    <h3>7. Derechos de la Empresa</h3>
+                    <ul> 
+                        <li>Modificacion de Politicas:La empresa se reserva el derecho de modificar estas políticas en cualquier momento. Las políticas actualizadas estarán disponibles en el sitio web.</li>
+                        <li>Denegacion de Servicio:la empresa se reserva el derecho de denegar el servicio a cualquier persona que infrinja estas políticas.</li> 
+                        <br>
+                            Estas políticas deben estar claramente comunicadas a todos los usuarios al momento de la reserva y deben estar disponibles en el sitio web y en las instalaciones. Además, es importante que el personal esté capacitado para hacer cumplir estas políticas de manera justa y consistente.</p>
+                </div> 
+        </section>
+    </main>
+    <footer>
+        <div>
+          <img src="img/logo.png" alt="logo">
+        <i class="fa-regular fa-copyright"></i>
+        <p>2024</p>
+        <a href="politicas.html" class="button">Ver Políticas de Uso</a>  
+        </div>
+        <div id="iconoWhatsapp">
+          <a href="https://wa.me/541121794871" >
+            <img src="../img/waap.png" alt="iconowapp" id="iconowaap">
+        </a>  
+        </div>
+    </footer>
+    <script src="js/navbar.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

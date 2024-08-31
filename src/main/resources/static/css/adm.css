@@ -1,0 +1,141 @@
+main {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: 1fr 2fr;
+    flex-grow: 1;
+    color: var(--color-quintenary);
+    padding: 2rem 0rem 2rem 15rem;
+}
+
+h2 {
+    color: var(--color-primary);
+}
+
+h4 {
+    margin-bottom: 0;
+}
+
+#noResponsive {
+    display: none;
+}
+
+
+/*Panel administrador*/
+#panelAdm {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#panelAdm button, #prodTabla th, #catTabla th, #prodTabla tr, #catTabla tr, #caractTabla tr{
+    border: none;
+    padding: 10px;
+    background-color: var(--color-quaternary);
+    color: var(--color-terceray);
+}
+
+#panelAdm button:hover, #prodTabla tr:hover, #catTabla tr:hover, #caractTabla tr:hover {
+    background-color: var(--color-primary);
+    color: var(--color-quaternary);
+}
+
+#panelAdm h2 {
+    align-self: center;
+}
+
+/*Formularios*/
+#formProd,
+#formCat,
+#image,
+#desCat {
+    display: flex;
+    flex-direction: column;
+}
+
+#checkboxCaract{
+    width: 40vw;
+}
+
+#image,
+#desCat {
+    gap: 5px;
+}
+
+#formProd button,
+#formCat button,
+#formEditProd button,
+#formCaract button{
+    margin-top: 30px;
+    background-color: #235C9F;
+    border-radius: 38px;
+    padding: 10px;
+    border: none;
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+#desCat input {
+    width: 10em;
+}
+
+#addProd {
+    pointer-events: auto;
+}
+
+#descripcion, #descripcionProd, #descripcionProdEdit{
+    resize: none;
+    padding: 12px 20px;
+    width: 50%;
+    height: 100px;
+}
+
+/*Tablas Listar*/
+#prodTabla, #catTabla , #caractTabla{
+   width: 90%;
+   border-collapse: collapse;
+}
+
+#prodTabla th, #catTabla th, #prodTabla tr, #catTabla tr, #caractTabla tr {
+    padding: 12px;
+    text-align: center;
+}
+
+#prodTabla th, #catTabla th, #caractTabla th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#prodTabla tr:hover, #catTabla tr:hover, #caractTabla tr:hover {
+    background-color: var(--color-primary);
+}
+
+#prodTabla th, #catTabla th, #prodTabla tr, #catTabla tr, #caractTabla tr{
+    padding: 12px;
+    text-align: center;
+}
+
+#caractTabla tr img{
+    width: 3rem;
+}
+
+#response{
+    grid-column: 2;
+    margin: 0;
+}
+
+/*No responsive*/
+@media (max-width: 780px) {
+    main {
+        display: none;
+    }
+
+    #noResponsive {
+        display: block;
+        color: var(--color-quintenary);
+        padding: 2rem;
+    }
+
+    footer{
+        position: absolute;
+    }
+}

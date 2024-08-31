@@ -1,0 +1,142 @@
+main {
+    color: var(--color-quintenary);
+    display: flex;
+    flex-direction: column;
+    padding: 3.125rem;
+}
+
+h1 {
+    text-align: center;
+    color: var(--color-primary);
+}
+
+#datosUsuario,
+#detalleProducto {
+    color: var(--color-quintenary);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 100%;
+}
+
+#datosUser {
+    padding-top: 8%;
+}
+
+#datosUser div,
+#datosProducto #nombreProd,
+#datosProducto #descripcion {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding-bottom: 2em;
+    width: 60%;
+}
+
+#detalleProducto #containerImagenCategoriaPrecio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50%;
+}
+
+#detalleReserva {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5%;
+}
+
+#fecha,
+#hora {
+    display: grid;
+    grid-template-columns: 0.1fr 0.1fr 0.1fr;
+    gap: 1em;
+    align-items: center;
+}
+
+#divTelefono,
+#divIndicaciones {
+    display: grid;
+    grid-template-columns: 0.1fr 0.1fr;
+    gap: 2em;
+    align-items: center;
+}
+
+#inputTelefono,
+#inputIndicaciones {
+    background-color: transparent;
+}
+
+#datosUsuario h2,
+#detalleProducto h2,
+#detalleReserva h2 {
+    text-align: left;
+    width: 100%;
+}
+
+#containerAvatar #avatar {
+    width: 9.375rem;
+    height: 9.375rem;
+}
+
+#imagenProducto {
+    width: 31.25em;
+    height: auto;
+    padding-top: 5%;
+}
+
+#buttonConfirmarReserva,
+#buttonEditarFecha button,
+#buttonEditarHora button {
+    border: none;
+    padding: 0.625rem;
+    background-color: var(--color-quaternary);
+    color: var(--color-terceray);
+}
+
+#buttonConfirmarReserva {
+    width: 10%;
+    align-self: center;
+}
+
+#buttonConfirmarReserva:hover,
+#buttonEditarFecha button:hover,
+#buttonEditarHora button:hover {
+    background-color: var(--color-primary);
+    color: var(--color-quaternary);
+}
+
+#respuestaReservas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#respuestaReservas .material-symbols-outlined {
+    color: green;
+    height: 50%;
+    width: auto;
+}
+
+#categoria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#categoria #imgCategoria {
+    width: 20%;
+    height: auto;
+}
+
+#caracteristicas img {
+    width: 3.125em;
+    height: auto;
+}
+
+#caracteristicas {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    text-align: center;
+}

@@ -1,0 +1,70 @@
+
+/* estilos de seccion politicas*/
+
+#mainPoliticas{
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+
+}
+
+#politicas {
+    width: 80vw;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   
+}
+.politicas-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.politica {
+    margin-bottom: 20px;
+}
+.politica h3{
+    margin-bottom: 10px;
+}
+
+.politica ul {
+    list-style-type:circle;
+    padding-left: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

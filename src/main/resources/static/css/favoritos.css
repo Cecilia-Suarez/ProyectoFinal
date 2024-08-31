@@ -1,0 +1,281 @@
+:root {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 16px;
+    --color-primary: #F6BF0F;
+    --color-secondary: #FFE07E;
+    --color-terceray: #FFF6D9;
+    --color-quaternary: #235C9F;
+    --color-quintenary: #0F2948;
+    box-sizing: border-box;
+    color: var(--color-terceray);
+    background-color: var(--color-terceray);
+}
+
+
+body, :root {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+header, footer {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-quintenary);
+    padding: 0.938rem;
+    color: var(--color-primary);
+}
+
+header {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    top: 0;
+    justify-content: space-between;
+    box-shadow: 0px 5px 5px var(--color-quintenary);
+    box-sizing: border-box;
+    padding: 7px 10px 0px 10px;
+}
+
+footer {
+    justify-content: left;
+    gap: 0.625rem;
+    width: 100%;
+    bottom: 0;
+    box-sizing: border-box;
+    box-shadow: 5px 0px 5px var(--color-quintenary);
+    text-decoration: underline; /* Esta línea asegura que el enlace esté subrayado */ 
+}
+
+header a img, footer img {
+    width: 6.250em;
+    height: auto;
+}
+
+header button {
+    border: none;
+    background-color: var(--color-quaternary);
+    color: var(--color-terceray);
+    font-family: "Barlow Condensed", sans-serif;
+    border-radius: 2.25rem;
+    padding: 0.938em;
+    font-size: 1.125em;
+}
+
+footer {
+    justify-content: left;
+    gap: 0.625rem;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 5px 0px 5px var(--color-quintenary);
+}
+
+/* Menú hamburguesa */
+.menu-icon {
+    display: none;
+}
+
+button:hover,
+input:hover,
+select:hover {
+    cursor: pointer;
+}
+
+/* Detalle */
+#detailUserMain {
+    color: black;
+}
+
+/* Usuario logueado */
+#userLogin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%;
+    flex-direction: row;
+}
+
+#user-avatar {
+    color: var(--color-quaternary); 
+    border-radius: 50%;
+    background-color: var(--color-terceray);
+    font-size: 30px;
+    font-weight: 600;
+    padding: 15px 20px;
+}
+
+#nombreYCierreDeSesion {
+    text-align: center;
+}
+
+#nombreCompletoUser {
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--color-terceray);
+    margin-bottom: 0;
+}
+
+#navbarUser, #navbarUserResponsive, #navbarUserResponsiveNoLogged {
+    color: var(--color-primary);
+    background-color: transparent;
+    border: none;
+    width: 16px;
+    height: 16px;
+}
+
+#navbarUser option, #navbarUserResponsive option, #navbarUserResponsiveNoLogged option {
+    background-color: var(--color-terceray);
+    font-weight: 600;
+    font-size: 16px;
+    color: black;
+    text-align: center;
+}
+
+#navbarUserResponsive, #navbarUserResponsiveNoLogged {
+    appearance: none;
+}
+
+a.button {
+    color: #F6BF0F;
+    text-decoration: none;
+}
+
+a.button:visited {
+    color: white;
+}
+
+a.button:hover {
+    color: white;
+}
+
+a.button:active {
+    color: white;
+}
+
+a {
+    color: #F6BF0F;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+}
+
+a:active {
+    color: white;
+}
+
+.producto {
+    border: 1px solid #ccc;
+    background-color: var(--color-quaternary);
+    border-radius: 10px;
+    padding: 1.250em;
+    width: 20vw;
+}
+
+.producto h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.625em;
+    color: var(--color-primary);
+}
+
+.producto p {
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+}
+
+.producto p.descripcion {
+    color: rgb(12, 12, 12);
+}
+
+.producto p.precio {
+    color: rgb(8, 8, 8);
+    font-weight: bold;
+}
+
+/* Estilos solo para el botón "Ver más" */
+.ver-mas-link {
+    border: none;
+    border-radius: 20px;
+    background-color: var(--color-secondary);
+    color: #00008b;
+    padding: 0.313em 0.625em;
+    font-size: 0.688em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    float: right;
+    margin-top: 0.625em;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.ver-mas-link:hover {
+    background-color: var(--color-primary);
+}
+
+#TituloFav {
+    
+    width: 100%;
+    height: 100vh;
+    margin-top: 1rem;
+}
+
+#listaFavoritos {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1em;
+    
+}
+
+h1{
+    color: #F6BF0F;
+    text-align: center;
+}
+
+
+@media (max-width: 1200px) {
+    .producto {
+        width: 40%; /* Ajuste de ancho para pantallas medianas */
+    }
+}
+
+@media (max-width: 800px) {
+    header, footer, #TituloFav, #listaFavoritos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #listaFavoritos {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    header button {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .producto {
+        width: 55%; /* Ajusta el ancho de los productos en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 600px) {
+    #listaFavoritos {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .producto {
+        width: 70%; /* Ajusta el ancho de los productos en pantallas muy pequeñas */
+    }
+}
+
+

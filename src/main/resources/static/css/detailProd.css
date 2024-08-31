@@ -1,0 +1,187 @@
+#detail {
+    color: var(--color-quintenary);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#titulo {
+    display: flex;
+    align-items: center;
+    gap: 1.250rem;
+    padding-left: 5rem;
+    font-size: 1.5em;
+    background-color: var(--color-quaternary);
+    margin-bottom: 10px;
+}
+
+h1,
+.material-symbols-outlined {
+    color: var(--color-primary);
+}
+
+#descripcionYcard{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;
+    color: var(--color-quintenary);
+    font-size: 1.2em;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.divCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-secondary);
+    border-radius: 2.188em;
+    border: 1px solid var(--color-quintenary);
+    padding: 0.313vh 1.875vw;
+}
+
+.divHorarios {
+    background-color: var(--color-terceray);
+    border-radius: 0.813em;
+    border: 1px solid var(--color-quaternary);
+    padding: 0.313vw;
+}
+
+.imgProd {
+    width: 30vw;
+    height: auto;
+    align-self: center;
+    margin-bottom: 52px;
+}
+
+#seccionCaracteristicas{
+    display: flex;
+    flex-direction: column;
+    margin: 3rem;
+}
+
+#caracteristicas{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.caracteristica{
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    margin: 0;
+    gap: 1rem;
+}
+
+.caracteristica img {
+    width: 3.5rem;
+    height: auto;
+    margin: 0;
+}
+
+.divTitulo {
+    align-self: center;
+}
+
+.descripciones{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+}
+
+.descripciones p{
+ font-weight: 500;
+}
+
+
+.divHorarios {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    margin-top: 20px;
+    max-width: 300px;
+}
+
+.divHorarios p {
+    margin: 10px 0;
+}
+
+.divHorarios input[type="date"],
+.divHorarios select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #FFE07E;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.divHorarios{
+    background-color: #FFF6D9
+}
+.divHorarios input[type="date"]{
+    width: 90%;
+}
+
+.buttonReserva {
+    display: block;
+    width: 60%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #235C9F;
+    color: white;
+    border: none;
+    border-radius: 36px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.buttonReserva:hover {
+    
+    background-color: #0F2948;
+}
+
+.divCard{
+    padding: 5 px;
+}
+
+@media (max-width: 800px) {
+
+    header,
+    footer, 
+    #detail, 
+    #caracteristicas {
+        flex-direction: column;
+    }
+
+    #descripcionYcard{
+        display: flex;
+        flex-direction: column;
+    }
+
+    /*Ocultamos los botones de "Iniciar Sesión" y "Registrarse".*/
+    header button {
+        display: none;
+    }
+
+    /*Mostrar el icono del menú hamburguesa.*/
+    .menu-icon {
+        display: block;
+    }
+
+    .menu-icon .fa-bars {
+        visibility: visible;
+        display: block;
+        font-size: 1rem;
+    }
+
+}
